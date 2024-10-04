@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>12d</title>
+</head>
+<body>
+  <button id="startButton" class="startButton"
+  style="
+  font-size: 20px;
+  margin-top: 20px;
+  margin-left: 25px;
+  ">
+  Start</button>
+  <script>
+    let stbtn = document.getElementById("startButton");
+    function Change1(){
+      if(stbtn.textContent == 'Start'){
+        stbtn.textContent = 'Loading...';
+      }
+    }
+
+    function Change2(){
+      if(stbtn.textContent == 'Loading...'){
+        stbtn.textContent = 'Finished';};
+    }
+    function Interval(){
+      Change1();
+      if(stbtn.textContent = 'Loading...'){
+        setInterval(function(){
+          Change2();
+        }, 1500);
+      }
+    };
+    document.querySelector('.startButton').addEventListener('click', () => {
+      Interval();
+    });
+  </script>
+</body>
+</html>

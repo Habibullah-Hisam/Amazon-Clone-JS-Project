@@ -1,0 +1,31 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.all{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: center;
+}
+
+#myp{
+  font-size: 60px;
+  font-weight: 700;
+}
+button{
+  background-color: rgb(0, 153, 255);
+  color: white;
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 20px 25px;
+  margin: 0px 5px;
+  cursor: pointer;
+  transition: opacity .25s;
+}
+button:hover{
+  opacity: .8;
+}
+button:active{
+  opacity: .6;
+}

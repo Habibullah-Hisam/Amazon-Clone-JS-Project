@@ -1,0 +1,29 @@
+#num-screen{
+  background-color: white;
+  margin: 12px 25px 7px 7px;
+  padding-left: 9px;
+  padding-top: 10px;
+  height: 28px;
+  width: 83%;
+  border: none;
+  border-radius: 5px;
+  overflow: auto;
+}
+.lineOfButton4{
+  display: inline-block;
+}
+.lineOfButton5{
+  display: inline-block;
+}
+#ResetButton{
+  width: 78px;
+}
+.lastline{
+  width: 78px;
+}
+
+#zeroBtn,
+#delBtn
+{
+  width: 35px;
+}

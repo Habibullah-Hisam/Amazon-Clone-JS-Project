@@ -1,0 +1,23 @@
+.title{
+    margin-bottom: 5px;
+    margin-left: 2px;
+    display: inline-block;
+}
+
+.viwes-and-time{
+    margin-left: 2px;
+    margin-top: 5px;
+    display: inline-block;
+    font-size: 16px;
+    color: rgba(0, 0, 0, .70);
+}
+
+
+.etc{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.title{
+    font-size: 20px;
+}

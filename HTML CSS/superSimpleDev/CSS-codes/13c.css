@@ -1,0 +1,77 @@
+.all{
+ height: 160px;
+ width: 511px;
+ box-shadow: 1px 1px 6px rgba(0, 0, 0, .15);
+ border-radius: 4px;
+ display: flex;
+ flex-direction: column;
+ font-family: Arial, Helvetica, sans-serif;
+ text-shadow: 1px 1px 2px rgba(0, 0, 0, .15);
+}
+
+.all-inbox{
+ color: rgba(0, 0, 0, .5);
+ font-size: 15px;
+ font-weight: 400;
+ margin-top: 10px;
+ margin-left: 15px;
+ margin-bottom: 5px;
+}
+
+.titels-profile-etc{
+ margin-left: 15px;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+}
+
+.profile{
+ height: 56px;
+ width: 56px;
+ border: none;
+ border-radius: 50%;
+ margin-right: 10px;
+ object-fit: cover;
+}
+
+.title-and-etc{
+ margin-top: 20px;
+ display: flex;
+ flex-direction: column;
+ width: 100%;
+}
+
+.titel-and-time{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ margin-bottom: 0px;
+ width: 100%;
+}
+
+.title{
+ font-weight: bolder;
+ font-size: 19px;
+ width: 235px;
+ margin-bottom: 0px;
+ line-height: 25px;
+}
+
+.name{
+ margin: 0px;
+}
+
+.main-title{
+ margin: 0px;
+}
+.time{
+ color: rgba(0, 0, 0, .5);
+ margin-right: 20px;
+ margin-top: 19px;
+}
+
+.massage{
+ margin-top: 3px;
+ font-size: 19px;
+ color: rgba(0, 0, 0, 0.5);
+}

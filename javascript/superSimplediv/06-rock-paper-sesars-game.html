@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Rock paper scissors</title>
+ <style>
+  body{
+   font-family: Arial, Helvetica, sans-serif;
+  }
+  .all{
+   display: flex;
+   flex-direction: column;
+  }
+  button{
+   padding: 18px 25px;
+   margin: 15px;
+   flex: 1;
+   background-color: black;
+   color: white;
+   border: none;
+   font-size: 20px;
+   font-family: Arial, Helvetica, sans-serif;
+   border-radius: 10px;
+   cursor: grabbing;
+  }
+  button:hover{
+   opacity: .9;
+  }
+  button:active{
+   opacity: .7;
+   cursor: not-allowed;
+  }
+ </style>
+</head>
+<body>
+ <p>Rock Paper Scissors</p>
+ <div class="all">
+  <button onclick="
+  const randomNumber1 = Math.round(Math.random() * 10);
+  if(randomNumber1 >= 0 && randomNumber1 <=3){
+   alert('Computers move: Rock \nTie');
+  } else if (randomNumber1 > 3 && randomNumber1 <=6){
+   alert('Computers move: Paper \nYou lose');
+  } else {
+   alert('Computers move: Scissors \nYou win');
+  };">
+   Rock
+  </button>
+  <button onclick="
+  const randomNumber2 = Math.round(Math.random() * 10);
+  if(randomNumber2 >= 0 && randomNumber2 <=3){
+   alert('Computers move: Paper \nTie');
+  } else if (randomNumber2 > 3 && randomNumber2 <=6){
+   alert('Computers move: Scissors \nYou lose');
+  } else {
+   alert('Computers move: Rock \nYou win');
+  };">
+  Paper
+ </button>
+  <button onclick="
+  const randomNumber3 = Math.round(Math.random() * 10);
+  if(randomNumber3 >= 0 && randomNumber3 <=3){
+   alert('Computers move: Scissors \nTie');
+  } else if (randomNumber3 > 3 && randomNumber3 <=6){
+   alert('Computers move: Rock \nYou lose');
+  } else {
+   alert('Computers move: Paper \nYou win');
+  };">
+  Scissors
+ </button>
+ </div>
+ <script></script>
+</body>
+</html>

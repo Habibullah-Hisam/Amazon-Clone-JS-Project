@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>cart Quantity</title>
+</head>
+<body>
+  <button onclick="
+ dekha.textContent = `Cart Quantity: ${cartQuantity}`;
+  console.log(`Cart Quantity: ${cartQuantity}`);
+  ">
+  Show Quantity
+</button>
+<button onclick="
+ cartQuantity++;
+ dekha.textContent = `Cart Quantity: ${cartQuantity}`;
+ console.log(`Cart Quantity: ${cartQuantity}`);
+ ">
+  Add to Cart
+</button>
+<button onclick="
+ cartQuantity += 2;
+ dekha.textContent = `Cart Quantity: ${cartQuantity}`;
+ console.log(`Cart Quantity: ${cartQuantity}`);
+ ">
+  +2
+</button>
+<button onclick="
+ cartQuantity += 3;
+ dekha.textContent = `Cart Quantity: ${cartQuantity}`;
+ console.log(`Cart Quantity: ${cartQuantity}`);
+ ">
+  +3
+</button>
+<button onclick="
+ cartQuantity = 0;
+ dekha.textContent = `Cart was reset. \n Cart Quantity: ${cartQuantity}`;
+ console.log('cart was reset.');
+ console.log(`Cart Quantity: ${cartQuantity}`);
+ ">
+  Recet Cart
+</button>
+<p id="showingTheCartQuantity">
+</p>
+<script>
+  let dekha = document.getElementById("showingTheCartQuantity");
+  let cartQuantity = 0;
+ </script>
+</body>
+</html>

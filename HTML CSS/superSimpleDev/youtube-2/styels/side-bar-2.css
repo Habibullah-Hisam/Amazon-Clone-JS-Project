@@ -1,0 +1,62 @@
+body{
+ padding-left: 80px;
+}
+
+
+.side-bar{
+ background-color: white;
+ color: white;
+ border-right: 1px solid rgba(0, 0, 0, .08);
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ position: fixed;
+ left: 0;
+ bottom: 0;
+ top: 55px;
+ width: 80px;
+
+ z-index: 100;
+}
+
+.home, 
+.explore,
+.subscribtions,
+.originals,
+.yt-music,
+.library
+{
+ height: 30px;
+ width: 30px;
+ padding-top: 8px;
+}
+
+.home-button,
+.explore-button,
+.subscribtions-button,
+.originals-button,
+.yt-music-button,
+.library-button
+{
+ background-color: white;
+ border: none;
+ width: 100%;
+ flex: 1;
+ transition: background-color 0.25s;
+}
+
+.home-button:hover,
+.explore-button:hover,
+.subscribtions-button:hover,
+.originals-button:hover,
+.yt-music-button:hover,
+.library-button:hover
+{
+ background-color: rgb(240, 240, 240);
+}
+
+.side-bar-items-name {
+ margin-top: 2px;
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 11px;
+}

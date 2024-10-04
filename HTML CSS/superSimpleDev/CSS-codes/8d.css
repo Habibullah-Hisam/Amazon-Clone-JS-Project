@@ -1,0 +1,51 @@
+
+input{
+    font-size: 18px;
+    color: rgba(0, 0, 0, .25);
+    border-color: solid;
+    border-color: rgba(0, 0, 0, .15);
+    padding-left: 11px;
+    margin-left: 8px;
+    margin-top: 8px;
+    height: 45px;
+    width: 138px;
+    border-radius: 7px;
+}
+
+.name{
+    margin-top: 80px;
+    display: block;
+    text-align: center;
+}
+.lname{
+    margin-left: 0px;
+}
+.email{
+    width: 297px;
+}
+.email2{
+    display: block;
+    text-align: center;
+}
+.signup{
+    font-size: 20px;
+    color: white;
+    height: 52px;
+    width: 314px;
+    margin-left: 8px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    background-color: rgb(60, 111, 250);
+}
+.signup:hover{
+    opacity: .8;
+}
+.signup:active{
+    opacity: .6;
+}
+.s2{
+    display: block;
+    text-align: center;
+}

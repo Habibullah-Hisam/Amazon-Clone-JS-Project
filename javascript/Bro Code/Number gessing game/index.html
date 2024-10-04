@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gess the number</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <label for="gessTheNumber" id="guessAnumber">Guess a number between 1-10 :</label>
+  <input type="text" name="" id="guessTheNumber" onkeydown = "
+  if(event.key === 'Enter'){
+    guessFunction();
+  }">
+  <button id="submitBtn" onclick="guessFunction();">submit</button>
+  <p id="yourPrediction"></p>
+  <p id="computersPrediction"></p>
+  <p id="tooBigOrTooSmoll"></p>
+  <p id="result"></p>
+
+  
+  <script src="index.js"></script>
+</body>
+</html>

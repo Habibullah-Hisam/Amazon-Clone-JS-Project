@@ -1,0 +1,82 @@
+body{
+  text-align: center;
+  padding-top: 45px;
+  background-color: beige;
+}
+.container{
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(6, 65, 117);
+  background-color: aliceblue;
+  display: inline-block;
+  min-height: 90px;
+  min-width: 250px;
+  text-align: center;
+  padding: 20px 15px;
+  border: 1px solid rgb(130, 174, 180);
+  border-radius: 7px;
+  box-shadow: 0px 0px 14px rgba(0, 86, 192, 0.274);
+}
+
+h1{
+  margin-top: 5px;
+}
+
+p{
+  padding-left: 25px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+#displayDiv{
+  margin-top: 25px;
+}
+
+input{
+  min-height: 20px;
+  border: 1px solid gray;
+  border-radius: 2px;
+  padding: 5px 8px;
+}
+
+#dateInput{
+  color: black;
+}
+
+button{
+  cursor: pointer;
+  border: 1px solid rgb(46, 37, 37);
+  border-radius: 1px;
+  padding: 7px 8px;
+}
+
+#addBtn{
+  background-color: rgb(0, 226, 0);
+  color: white;
+  border: none;
+  transition: background-color .1s,
+              color .1s;
+}
+
+#addBtn:hover{
+  background-color: rgb(18, 255, 26);
+}
+#addBtn:active{
+  background-color: rgb(96, 255, 81);
+}
+
+.delBtn{
+  margin-left: 15px;
+  background-color: red;
+  color: white;
+  transition: background-color .1s,
+              color .1s;
+}
+.delBtn:hover{
+  background-color: rgb(228, 0, 0);
+}
+
+
+.delBtn:active{
+  background-color: rgb(255, 75, 75);
+}

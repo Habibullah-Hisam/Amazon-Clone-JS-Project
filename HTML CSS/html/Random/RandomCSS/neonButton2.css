@@ -1,0 +1,10 @@
+.center{
+    display: inline-block;
+    vertical-align: middle;
+}
+html,body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+}

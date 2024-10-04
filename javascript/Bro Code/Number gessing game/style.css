@@ -1,0 +1,12 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  margin-top: 50px;
+  margin-left: 40px;
+}
+input,
+button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  padding: 5px 8px;
+} 

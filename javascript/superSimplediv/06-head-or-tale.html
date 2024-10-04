@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Head or tale</title>
+ <style>
+  button{
+   padding: 18px 25px;
+   margin: 15px;
+   width: 300px;
+   background-color: black;
+   color: white;
+   border: none;
+   font-size: 20px;
+   font-family: Arial, Helvetica, sans-serif;
+   border-radius: 10px;
+   cursor: none;
+  }
+  button:hover{
+   opacity: .9;
+  }
+  button:active{
+   opacity: .7;
+   cursor: wait;
+  }
+ </style>
+</head>
+<body>
+ <button onclick="
+  let random = ((Math.random()) * 10);
+  if (random >= 0 && random < 5){
+   alert('Tale \nYou lose');
+  } else {
+   alert('Head \nYou win');
+  }" class="head-button">Head</button>
+ <button onclick="
+ let random1 = ((Math.random()) * 10);
+ if (random1 >= 0 && random1 < 5){
+  alert('Tale \nYou win');
+ } else {
+  alert('Head \nYou lose');
+ }" class="tale-button">Tale</button>
+</body>
+</html>

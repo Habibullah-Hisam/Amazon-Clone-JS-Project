@@ -1,0 +1,60 @@
+
+.all{
+ background-color: rgb(159, 56, 255);
+ display: flex;
+ flex-direction: row;
+ height: 46px;
+ justify-content: space-between;
+ border-radius: 2px;
+ font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.home{
+ background-color: rgb(159, 56, 255);
+ border: none;
+ color: white;
+ cursor: pointer;
+ height: 100%;
+ padding-left: 13px;
+}
+
+.home:hover{
+ opacity: .9;
+}
+
+.home:active{
+ opacity: .8;
+}
+
+
+.search{
+ padding-left: 15px;
+ border-radius: 22px;
+ height: 27px;
+ flex: 1;
+ max-width: 700px;
+ border: none;
+ margin: 8px;
+}
+
+.download{
+ color: white;
+ background-color: rgb(159, 56, 255);
+ border: 1px solid white;
+ border-radius: 4px;
+ padding: 5px;
+ padding-left: 10px;
+ padding-right: 10px;
+ cursor: pointer;
+ margin: 9px;
+}
+
+.download:hover{
+ opacity: .9;
+}
+
+.download:active{
+ opacity: .8;
+}

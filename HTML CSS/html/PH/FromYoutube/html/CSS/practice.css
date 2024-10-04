@@ -1,0 +1,14 @@
+.a{
+    color: rgba(0, 0, 0, .6);
+    background-color: antiquewhite;
+    height: 50%;
+    width: 50%;
+    padding-left: 60px;
+}
+#a{
+    color: rgba(0, 255, 255, .8);
+    background-color: black;
+}
+.b{
+    text-align: center;
+}

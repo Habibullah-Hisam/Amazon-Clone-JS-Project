@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Hello there</title>
+</head>
+<body>
+ <button onclick="
+  hello('hisam');">Hello</button>
+ <button onclick="
+  hello();">Hi</button>
+ <script>
+  function hello(name) {
+   if (!name){
+    alert(`Hi! There.`);
+   }else{
+    alert(`Hello! ${name}.`);
+   }
+  }
+ </script>
+</body>
+</html>
