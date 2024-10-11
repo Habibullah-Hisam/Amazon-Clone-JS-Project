@@ -115,6 +115,9 @@
   margin-bottom: 5px;
 }
 
+.update-save-container{
+  display: inline-block;
+}
 .product-quantity .link-primary {
   margin-left: 3px;
 }
@@ -125,6 +128,7 @@
   border-radius: 3px;
   margin-right: 0px;
 }
+
 
 @media (max-width: 1000px) {
   .delivery-options {

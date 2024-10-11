@@ -47,6 +47,24 @@ export function removeFromCart(productId) {
   saveToStorage();
 };
 
-export function updateProductQuantity() {
+export function updateCartQuantity() {
   
+  let cartQuantity = 0;
+  
+  cart.forEach((cartItem) => {
+    cartQuantity += cartItem.quantity;
+  });
+  
+  document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
+};
+
+export function calculateCartQuantity() {
+  let cartQuantity = 0;
+  
+  cart.forEach((cartItem) => {
+    cartQuantity += cartItem.quantity;
+  });
+  
+  document.querySelector('.checkout-middle-header-js').innerHTML = `Checkout (<a class="return-to-home-link"
+    href="amazon.html">${cartQuantity} items</a>)`;
 }

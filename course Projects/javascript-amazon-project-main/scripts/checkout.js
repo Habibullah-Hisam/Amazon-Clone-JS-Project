@@ -1,4 +1,4 @@
-import { cart, removeFromCart, updateProductQuantity } from "../data/cart.js";
+import { cart, removeFromCart, updateCartQuantity } from "../data/cart.js";
 import { products } from "../data/products.js";
 import { formatCurrency } from "./utils/money.js";
 
@@ -112,6 +112,8 @@ document.querySelectorAll('.js-delete-link').forEach((link) => {
     container.remove();
   });
 });
+
+updateCartQuantity();
 
 
 document.querySelectorAll('.update-quantity-link-js').forEach((link) => {
