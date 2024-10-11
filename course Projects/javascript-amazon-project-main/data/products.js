@@ -152,8 +152,8 @@ export const products = [
   },
   {
     id: "5968897c-4d27-4872-89f6-5bcb052746d7",
-    image: "images/products/women-chiffon-beachwear-coverup-black.jpg",
-    name: "Women's Chiffon Beachwear Cover Up - Black",
+    image: "images/products/Elegant-hat-for-women.jpg",
+    name: "Women's Hat - Black",
     rating: {
       stars: 4.5,
       count: 235
