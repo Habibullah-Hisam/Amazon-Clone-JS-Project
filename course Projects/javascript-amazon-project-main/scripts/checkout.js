@@ -129,7 +129,6 @@ document.querySelectorAll('.save-quantity-link-js').forEach((link) => {
     let updaBtn = document.querySelector(`.update-quantity-link-js-${productId}`);
     let displayArea = document.querySelector(`.quantity-label-js-${productId}`);
     let inputAreaValue = Number(document.querySelector(`.update-quantity-link-js-input`).value);
-    let inputArea = document.querySelector(`.update-quantity-link-js-input`);
     saveBtn.textContent = '';
     saveBtn.style = 'opacity: 0;position: absolute;z-index: 0;';
     updaBtn.style = 'position: relative; z-index: 100;';
