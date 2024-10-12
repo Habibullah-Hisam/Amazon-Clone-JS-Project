@@ -1,4 +1,4 @@
-import { cart, removeFromCart, updateCartQuantity } from "../data/cart.js";
+import { cart, removeFromCart, calculateCartQuantity, saveToStorage } from "../data/cart.js";
 import { products } from "../data/products.js";
 import { formatCurrency } from "./utils/money.js";
 
@@ -35,12 +35,13 @@ cart.forEach((cartItem) => {
         </div>
         <div class="product-quantity">
           <span>
-            Quantity: <span class="quantity-label">${cartItem.quantity}</span>
+            Quantity: <span class="quantity-label quantity-label-js-${matchimgProduct.id}" data-product-id="${matchimgProduct.id}">${cartItem.quantity}</span>
           </span>
 
-          <span class="update-quantity-link-js-2-${matchimgProduct.id}" data-product-id="${matchimgProduct.id}">
+          <span class="save-quantity-link link-primary save-quantity-link-js-${matchimgProduct.id} save-quantity-link-js" data-product-id="${matchimgProduct.id}">
           
           </span>
+
           <span class="update-quantity-link link-primary update-quantity-link-js-${matchimgProduct.id} update-quantity-link-js" data-product-id="${matchimgProduct.id}">
             Update
           </span>
@@ -102,6 +103,55 @@ cart.forEach((cartItem) => {
 
 document.querySelector('.js-order-summary').innerHTML = cartSummaryHTML;
 
+
+document.querySelector('.checkout-middle-header-js').innerHTML =
+`Checkout (<a class="return-to-home-link" href="amazon.html">${calculateCartQuantity()} items</a>)`;
+
+ 
+
+document.querySelectorAll('.update-quantity-link-js').forEach((link) => {
+   link.addEventListener('click', () => {
+     const productId = link.dataset.productId;
+     let saveBtn = document.querySelector(`.save-quantity-link-js-${productId}`);
+     let updaBtn = document.querySelector(`.update-quantity-link-js-${productId}`);
+     let displayArea = document.querySelector(`.quantity-label-js-${productId}`);
+     saveBtn.textContent = 'Save';
+     displayArea.innerHTML = '<input type="number" class="update-quantity-link-js-input">';
+     saveBtn.style = 'position: relative; z-index: 100;';
+     updaBtn.style = 'opacity: 0;position: absolute;z-index: 0;';
+    });
+});
+
+document.querySelectorAll('.save-quantity-link-js').forEach((link) => {
+  link.addEventListener('click', () => {
+    const productId = link.dataset.productId;
+    let saveBtn = document.querySelector(`.save-quantity-link-js-${productId}`);
+    let updaBtn = document.querySelector(`.update-quantity-link-js-${productId}`);
+    let displayArea = document.querySelector(`.quantity-label-js-${productId}`);
+    let inputAreaValue = Number(document.querySelector(`.update-quantity-link-js-input`).value);
+    let inputArea = document.querySelector(`.update-quantity-link-js-input`);
+    saveBtn.textContent = '';
+    saveBtn.style = 'opacity: 0;position: absolute;z-index: 0;';
+    updaBtn.style = 'position: relative; z-index: 100;';
+
+    let matchingItem;
+  
+    cart.forEach((cartItem) => {
+      if(productId === cartItem.productId) {
+        matchingItem = cartItem;
+      }
+    });
+    if (matchingItem) {
+      matchingItem.quantity = inputAreaValue;
+      displayArea.innerHTML = inputAreaValue;
+      saveToStorage();
+
+      document.querySelector('.checkout-middle-header-js').innerHTML =
+      `Checkout (<a class="return-to-home-link" href="amazon.html">${calculateCartQuantity()} items</a>)`;
+    } 
+  });
+});
+
 document.querySelectorAll('.js-delete-link').forEach((link) => {
   link.addEventListener('click', () => {
     const productId = link.dataset.productId;
@@ -110,50 +160,7 @@ document.querySelectorAll('.js-delete-link').forEach((link) => {
     const container = document.querySelector(`.js-cart-item-container-${productId}`);
 
     container.remove();
-  });
-});
-
-updateCartQuantity();
-
-
-document.querySelectorAll('.update-quantity-link-js').forEach((link) => {
-  link.addEventListener('click', () => {
-    const productId = link.dataset.productId;
-
-    let updateQuantitySpanClass = document.querySelector(`.update-quantity-link-js`)
-    if(updateQuantitySpanClass.textContent = 'Update'){
-  
-      console.log(updateQuantitySpanClass.textContent);
-  
-      document.querySelector(`.update-quantity-link-js-${productId}`).innerHTML = 'Save';
-      
-      let updateQuantityLinkhtml = `<input type="number" class="update-quantity-link-js-input"></input>
-      `;
-      document.querySelector(`.update-quantity-link-js-2-${productId}`).innerHTML = updateQuantityLinkhtml;
-    };
-    if(updateQuantitySpanClass.textContent = 'Save'){
-      let chakingQuantityInput = Number(document.querySelector('.update-quantity-link-js-input'));
-
-      if(!chakingQuantityInput) {
-        document.querySelector(`.update-quantity-link-js-${productId}`).innerHTML = 'Save';
-      
-      let updateQuantityLinkhtml = `<input type="number" class="update-quantity-link-js-input"></input>
-      `;
-      document.querySelector(`.update-quantity-link-js-2-${productId}`).innerHTML = updateQuantityLinkhtml;
-      } else if(chakingQuantityInput){
-        
-        
-        console.log(chakingQuantityInput);
-
-        document.querySelector(`.update-quantity-link-js-${productId}`).innerHTML = 'Update';
-      
-      let updateQuantityLinkhtml = ``;
-      document.querySelector(`.update-quantity-link-js-2-${productId}`).innerHTML = updateQuantityLinkhtml;
-        // cart.quantity = changedQuantity;
-        // saveToStorage();
-      }
-    };
-
-    
+    document.querySelector('.checkout-middle-header-js').innerHTML =
+    `Checkout (<a class="return-to-home-link" href="amazon.html">${calculateCartQuantity()} items</a>)`;
   });
 });
