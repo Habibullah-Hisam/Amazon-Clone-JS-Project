@@ -132,9 +132,9 @@ document.querySelectorAll('.save-quantity-link-js').forEach((link) => {
     saveBtn.textContent = '';
     saveBtn.style = 'opacity: 0;position: absolute;z-index: 0;';
     updaBtn.style = 'position: relative; z-index: 100;';
-
+    
     let matchingItem;
-  
+    
     cart.forEach((cartItem) => {
       if(productId === cartItem.productId) {
         matchingItem = cartItem;
@@ -144,12 +144,15 @@ document.querySelectorAll('.save-quantity-link-js').forEach((link) => {
       matchingItem.quantity = inputAreaValue;
       displayArea.innerHTML = inputAreaValue;
       saveToStorage();
-
+      
       document.querySelector('.checkout-middle-header-js').innerHTML =
       `Checkout (<a class="return-to-home-link" href="amazon.html">${calculateCartQuantity()} items</a>)`;
     } 
   });
 });
+
+let inputArea = document.querySelector(`.update-quantity-link-js-input`);
+
 
 document.querySelectorAll('.js-delete-link').forEach((link) => {
   link.addEventListener('click', () => {
