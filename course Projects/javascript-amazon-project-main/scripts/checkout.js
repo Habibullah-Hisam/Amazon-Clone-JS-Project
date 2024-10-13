@@ -135,20 +135,30 @@ document.querySelectorAll('.save-quantity-link-js').forEach((link) => {
     updaBtn.style = 'position: relative; z-index: 100;';
     
     let matchingItem;
+    let matchingItemquantity;
     
     cart.forEach((cartItem) => {
       if(productId === cartItem.productId) {
         matchingItem = cartItem;
+        matchingItemquantity = cartItem.quantity;
       }
     });
     if (matchingItem) {
-      matchingItem.quantity = inputAreaValue;
-      displayArea.innerHTML = inputAreaValue;
-      saveToStorage();
-      
-      document.querySelector('.checkout-middle-header-js').innerHTML =
-      `Checkout (<a class="return-to-home-link" href="amazon.html">${calculateCartQuantity()} items</a>)`;
-    }
+      if(inputAreaValue == false) {
+        matchingItem.quantity = matchingItemquantity;
+        displayArea.innerHTML = matchingItemquantity;
+        document.querySelector('.checkout-middle-header-js').innerHTML =
+        `Checkout (<a class="return-to-home-link" href="amazon.html">${calculateCartQuantity()} items</a>)`;
+        saveToStorage();
+      } else {
+        matchingItem.quantity = inputAreaValue;
+        displayArea.innerHTML = inputAreaValue;
+        saveToStorage();
+        
+        document.querySelector('.checkout-middle-header-js').innerHTML =
+        `Checkout (<a class="return-to-home-link" href="amazon.html">${calculateCartQuantity()} items</a>)`;
+      };
+    };
   });
 });
 
