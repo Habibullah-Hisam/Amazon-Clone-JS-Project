@@ -114,11 +114,13 @@ document.querySelectorAll('.update-quantity-link-js').forEach((link) => {
      const productId = link.dataset.productId;
      let saveBtn = document.querySelector(`.save-quantity-link-js-${productId}`);
      let updaBtn = document.querySelector(`.update-quantity-link-js-${productId}`);
+     let deleteBtn = document.querySelector('.js-delete-link');
      let displayArea = document.querySelector(`.quantity-label-js-${productId}`);
      saveBtn.textContent = 'Save';
      displayArea.innerHTML = '<input type="number" class="update-quantity-link-js-input">';
-     saveBtn.style = 'position: relative; z-index: 100;';
-     updaBtn.style = 'opacity: 0;position: absolute;z-index: 0;';
+     saveBtn.style = 'position: absolute; z-index: 100;';
+     updaBtn.style = 'opacity: 0;position: relative;z-index: -1;';
+     deleteBtn.style = 'position: absolute; z-index: 100;';
     });
 });
 
@@ -127,11 +129,13 @@ document.querySelectorAll('.save-quantity-link-js').forEach((link) => {
     const productId = link.dataset.productId;
     let saveBtn = document.querySelector(`.save-quantity-link-js-${productId}`);
     let updaBtn = document.querySelector(`.update-quantity-link-js-${productId}`);
+    let deleteBtn = document.querySelector('.js-delete-link');
     let displayArea = document.querySelector(`.quantity-label-js-${productId}`);
     let inputAreaValue = Number(document.querySelector(`.update-quantity-link-js-input`).value);
     saveBtn.textContent = '';
     saveBtn.style = 'opacity: 0;position: absolute;z-index: 0;';
     updaBtn.style = 'position: relative; z-index: 100;';
+    deleteBtn.style = 'position: relative; z-index: 0;';
     
     let matchingItem;
     let matchingItemquantity;
