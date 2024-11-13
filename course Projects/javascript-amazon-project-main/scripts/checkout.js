@@ -5,9 +5,12 @@ import { formatCurrency } from "./utils/money.js";
 let cartSummaryHTML = '';
 
 let today = dayjs();
-let delevarydate = today.add(7, 'days');
-let displayresult = delevarydate.format('dddd, MMMM, D');
-console.log(displayresult);
+let freeDeleverydate = today.add(7, 'days').format('dddd, MMMM D');
+let midpayDeleverydate = today.add(6, 'days').format('dddd, MMMM D');
+let premiumDeleverydate = today.add(5, 'days').format('dddd, MMMM D');
+
+
+
 
 cart.forEach((cartItem) => {
   const productId = cartItem.productId;
@@ -24,7 +27,7 @@ cart.forEach((cartItem) => {
   cartSummaryHTML += `
   <div class="cart-item-container js-cart-item-container-${matchimgProduct.id}">
     <div class="delivery-date">
-      Delivery date: Tuesday, June 21
+      Delivery date: ${freeDeleverydate}
     </div>
 
     <div class="cart-item-details-grid">
@@ -64,10 +67,11 @@ cart.forEach((cartItem) => {
         <div class="delivery-option">
           <input type="radio" checked
             class="delivery-option-input"
+            id="free-delevery-radio"
             name="delivery-option-${matchimgProduct.id}">
           <div>
             <div class="delivery-option-date">
-              Tuesday, June 21
+              ${freeDeleverydate}
             </div>
             <div class="delivery-option-price">
               FREE Shipping
@@ -77,10 +81,11 @@ cart.forEach((cartItem) => {
         <div class="delivery-option">
           <input type="radio"
             class="delivery-option-input"
+            id="midpay-delevery-radio"
             name="delivery-option-${matchimgProduct.id}">
           <div>
             <div class="delivery-option-date">
-              Wednesday, June 15
+              ${midpayDeleverydate}
             </div>
             <div class="delivery-option-price">
               $4.99 - Shipping
@@ -90,10 +95,11 @@ cart.forEach((cartItem) => {
         <div class="delivery-option">
           <input type="radio"
             class="delivery-option-input"
+            id="permium-delevery-radio"
             name="delivery-option-${matchimgProduct.id}">
           <div>
             <div class="delivery-option-date">
-              Monday, June 13
+              ${premiumDeleverydate}
             </div>
             <div class="delivery-option-price">
               $9.99 - Shipping
