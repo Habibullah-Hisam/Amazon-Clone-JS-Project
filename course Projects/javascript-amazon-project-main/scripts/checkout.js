@@ -3,11 +3,11 @@ import { products } from "../data/products.js";
 import { formatCurrency } from "./utils/money.js";
 import { deliveryOptions } from "../data/deliveryOptions.js";
 
-let cartSummaryHTML = '';
 
 
 
 function renderOrderSummary() {
+  let cartSummaryHTML = '';
   
   cart.forEach((cartItem) => {
     const productId = cartItem.productId;
@@ -212,7 +212,6 @@ function renderOrderSummary() {
       const {productId, deliveryOptionId} = element.dataset;
       updateDeliveryOption(productId, deliveryOptionId);
       renderOrderSummary();
-      location.reload();
     });
   });
   
