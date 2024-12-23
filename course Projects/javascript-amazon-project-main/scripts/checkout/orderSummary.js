@@ -2,6 +2,7 @@ import { cart, removeFromCart, calculateCartQuantity, saveToStorage, updateDeliv
 import { products,getProduct } from "../../data/products.js";
 import { formatCurrency } from "../utils/money.js";
 import { deliveryOptions,getDeliveryOption } from "../../data/deliveryOptions.js";
+import { renderPaymentSummary } from "./paymentSummary.js";
 
 
 
@@ -177,6 +178,7 @@ export function renderOrderSummary() {
           `Checkout (<a class="return-to-home-link" href="amazon.html">${calculateCartQuantity()} items</a>)`;
         };
       };
+      renderPaymentSummary();
     });
   });
   
@@ -192,6 +194,8 @@ export function renderOrderSummary() {
       container.remove();
       document.querySelector('.checkout-middle-header-js').innerHTML =
       `Checkout (<a class="return-to-home-link" href="amazon.html">${calculateCartQuantity()} items</a>)`;
+
+      renderPaymentSummary();
     });
   });
   
@@ -200,6 +204,7 @@ export function renderOrderSummary() {
       const {productId, deliveryOptionId} = element.dataset;
       updateDeliveryOption(productId, deliveryOptionId);
       renderOrderSummary();
+      renderPaymentSummary();
     });
   });
   
