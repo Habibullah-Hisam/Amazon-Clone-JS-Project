@@ -6,7 +6,17 @@ import { loadProducts, loadProductsFetch } from "../data/products.js";
 
 
 async function loadPage(){
-  await loadProductsFetch();
+  try {
+
+    // throw 'error'; // also we can use reject to throw error for future
+    // throw dosen't work in async function in that case we have to use reject
+
+    await loadProductsFetch();
+
+  } catch (error) {
+    console.log('Unexpected error. Please try again later.');
+    // console.error(error);
+  }
 
   renderOrderSummary();
   renderPaymentSummary();
