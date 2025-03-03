@@ -163,7 +163,7 @@ export function renderOrderSummary() {
         }
       });
       if (matchingItem) {
-        if(inputAreaValue == false) {
+        if(inputAreaValue == false || inputAreaValue < 0) {
           matchingItem.quantity = matchingItemquantity;
           displayArea.innerHTML = matchingItemquantity;
           document.querySelector('.checkout-middle-header-js').innerHTML =
