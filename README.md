@@ -10,8 +10,6 @@
 
 📫 Feel free to reach out to me at email: habibullahhisam@gmail.com Linkedin: https://www.linkedin.com/in/habibullah123/
 
-😄 Pronouns: He/Him
-
 ⚡ Fun fact: I enjoy solving complex logic puzzles in my free time.
 
 ---

@@ -49,28 +49,20 @@ class Clothing extends Product {
   }
 
   extraInfoHTML() {
-    
+
     return `
       <a href="${this.sizeChartLink}" target="_blank">
         Size Chart
       </a>
     `;
   }
-}
 
+}
 
 // const date = new Date();
 // console.log(date);
 // console.log(date.toLocaleDateString()); // date.toLocaleDateString();
 
-
-
-// console.log(this);
-
-// const object2 = {
-//   a: 2,
-//   b: this.a,
-// };
 
 
 // function logThis() {
@@ -88,7 +80,7 @@ class Clothing extends Product {
 // object3.method();
 
 
-
+/*
 export let products = [];
 
 export function loadProductsFetch() {
@@ -140,8 +132,8 @@ export function loadProducts(fun) {
   xhr.open('GET', 'https://supersimplebackend.dev/products');
   xhr.send();
 }
+  */
 
-/*
 export const products = [
   {
     id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
@@ -807,4 +799,3 @@ export const products = [
   }
   return new Product(productDetailds);
 });
-*/

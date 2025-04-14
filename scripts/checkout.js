@@ -1,10 +1,10 @@
 import { renderOrderSummary } from "./checkout/orderSummary.js";
 import { renderPaymentSummary } from "./checkout/paymentSummary.js";
-import { loadProducts, loadProductsFetch } from "../data/products.js";
+// import { loadProducts, loadProductsFetch } from "../data/products.js";
 // import '../data/cart-class.js';
 // import '../data/backend-practice.js';
 
-
+/*
 async function loadPage(){
   try {
 
@@ -24,7 +24,7 @@ async function loadPage(){
   return 'value2';
 }
 loadPage();
-
+*/
 
 // Promise.all([
 //   loadProductsFetch()
@@ -36,6 +36,6 @@ loadPage();
 
 
 // loadProducts(() => {
-//   renderOrderSummary();
-//   renderPaymentSummary();
 // });
+renderOrderSummary();
+renderPaymentSummary();
