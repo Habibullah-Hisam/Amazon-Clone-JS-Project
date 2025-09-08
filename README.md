@@ -55,4 +55,5 @@ This repository contains a front-end Amazon clone built using HTML, CSS and Java
 
 ## Contributing
 
-Contributions are welcome! If you find any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request.
+Contributions are absolutely not welcome!
+Because it's my personal project of my learning journey.
